@@ -44,6 +44,9 @@ public class ResumoSecao4 {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		
+		
 
 		String product1 = "Computer";
 		String product2 = "Office desk";
