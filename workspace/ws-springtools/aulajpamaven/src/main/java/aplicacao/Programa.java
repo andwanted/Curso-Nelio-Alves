@@ -15,10 +15,15 @@ public class Programa {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("exemplo-jpa");
 		EntityManager em = emf.createEntityManager();
 		em.getTransaction().begin();
+		//para excluir uma pessoa na tabela, precisa dar um find para que esteja monitorado
+		//caso contrario seria destacado
 		
 		Pessoa p = em.find(Pessoa.class, 2);
 		
-		System.out.println(p);
+		em.remove(p);
+		em.getTransaction().commit();
+		
+		
 		System.out.println("Pronto!!");
 		
 		em.close();
